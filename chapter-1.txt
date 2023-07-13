@@ -31,3 +31,10 @@ smoothly.
 Still, clearly the best network design is the one that’s perfectly configured to meet the business
 requirements of the specific company or client it serves, and it’s usually one in which LAN
 switches exist in harmony with routers strategically placed in the network
+
+Ada istilah collision domain dan broadcast domain. collision tuh dari satu point ke point lainnya (kalo bolak balik sama ga diitun). Eh entahlah masih ga jelas wkwkk
+
+saat buku dibuat, switch 10 Gbps itu minimum
+
+== Internetworking Models ===
+
