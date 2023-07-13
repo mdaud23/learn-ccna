@@ -1,0 +1,33 @@
+ICND1 Install, operate, and troubleshoot: IP data networks, LAN switching tech, IPv6, IP routing tech, IP services, network device security, basic troubleshooting
+
+ICND2 Install, operate, and troubleshoot: LAN switching tech, IP routin tech, security, troubleshooting, WAN tech
+
+Some tips to take the Cisco Exam
+
+== Chapter 1: Internetworking ==
+  Internetwork := you create an internetwork when you connect two or more networks via a router and configure a logical network addressing scheme with a protocol such as IP or IPv6
+
+Imagine network as a neighborhood with its rule of street and way. There are some block or segmentation also. 
+  Hub doesn't have mind, switch does
+
+Terlalu banyak broadcast/multicast gitu dapat mengakibatkan LAN traffic congestion
+
+Hubs don't segment the network; they just connect network segments. Routers are basically employed to efficiently break up a broadcast domain
+
+Routers create internetwork
+
+we don’t use layer 2 switches to create internetworks because they don’t break up broadcast domains by default. Jadi, si switch teh cuma digunakan dalam lingkup LAN saja
+
+Okay, so by default, switches break up collision domains, but what are these things? Collision
+domain is an Ethernet term used to describe a network scenario in which one device sends a
+packet out on a network segment and every other device on that same segment is forced to pay
+attention no matter what. This isn’t very efficient because if a different device tries to transmit at
+the same time, a collision will occur, requiring both devices to retransmit, one at a time—not
+good! This happens a lot in a hub environment, where each host segment connects to a hub that
+represents only one collision domain and a single broadcast domain. By contrast, each and every
+port on a switch represents its own collision domain, allowing network traffic to flow much more
+smoothly.
+
+Still, clearly the best network design is the one that’s perfectly configured to meet the business
+requirements of the specific company or client it serves, and it’s usually one in which LAN
+switches exist in harmony with routers strategically placed in the network
