@@ -36,5 +36,62 @@ Ada istilah collision domain dan broadcast domain. collision tuh dari satu point
 
 saat buku dibuat, switch 10 Gbps itu minimum
 
+Broadcast Domain:
+- A group of devices that will hear a broadcast by a host
+- Separated by Routers
+
+Collision Domain:
+- All the devices in danger of a collision if two or more transmit at the same time
+- Routers, Switches, bridges separate collision domains
+- Repeaters and hubs create a single collision domain
+
+7. Application Layer:
+- The Application layer is working as the
+interface between the actual application program and the next layer down by providing ways for
+the application to send information down through the protocol stack
+- Identifying and confirming the communication partner’s availability and verifying the required
+resources to permit the specified type of communication to take place also occurs at the
+Application layer
+
+6. Presentation Layer:
+- The Presentation layer gets its name from its purpose: It presents data to the Application layer
+and is responsible for data translation and code formatting
+- So just
+remember that by providing translation services, the Presentation layer ensures that data
+transferred from the Application layer of one system can be read by the Application layer of
+another one
+
+5. Session Layer:
+- The Session layer is responsible for setting up, managing, and dismantling sessions between
+Presentation layer entities and keeping user data separate. Dialog control between devices also
+occurs at this layer.
+- Communication between hosts’ various applications at the Session layer, as from a client to a
+server, is coordinated and organized via three different modes: simplex, half-duplex, and fullduplex.
+
+4. Transport Layer:
+- The Transport layer segments and reassembles data into a single data stream
+- A pair of well-known protocols called TCP and UDP are integral to this layer
+- The term reliable networking can be used at the Transport layer. Reliable
+networking requires that acknowledgments, sequencing, and flow control will all be used.
+- For reliable transport to occur, a device that wants to transmit must first establish a connectionoriented
+communication session with a remote device—its peer system—known as a call setup or
+a three-way handshake. Once this process is complete, the data transfer occurs, and when it’s
+finished, a call termination takes place to tear down the virtual circuit.
+
+Transport Layer bisa jadi bottleneck kalo semua perangkat lain dah bagus tapi spek network device nya ccd
+Ada istilah buffer ketika datanya rada tersendat karena terlalu melebihi kapasitas traffic
+solusinya adalah flow control
+
+Connection-oriented service:
+- pakai three way handshake
+- it uses sequencing
+- it uses acknowledgement 
+- it uses flow control: buffering, windowing, and congestion avoidance
+
+Uses session multiplexing agar ketika di tab baru masih dengan session yang sama
+
+3. Network Layer:
+
+
 == Internetworking Models ===
 
