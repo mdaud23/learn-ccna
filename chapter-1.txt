@@ -52,6 +52,11 @@ the application to send information down through the protocol stack
 - Identifying and confirming the communication partner’s availability and verifying the required
 resources to permit the specified type of communication to take place also occurs at the
 Application layer
+- The Application layer is responsible for identifying and establishing the availability of the
+intended communication partner and determining whether sufficient resources for the
+intended communication exist
+- The Application layer is responsible for identifying and establishing the availability of the
+intended communication partner and determining whether sufficient resources for the intended communication exist
 
 6. Presentation Layer:
 - The Presentation layer gets its name from its purpose: It presents data to the Application layer
@@ -91,6 +96,48 @@ Connection-oriented service:
 Uses session multiplexing agar ketika di tab baru masih dengan session yang sama
 
 3. Network Layer:
+
+Layer 3 manage device addressing, tracks the location of devices n the network, and determines the best way to move data.
+di router ada routing table
+Router
+
+2. Data Link Layer:
+
+The Data Link layer provides for the physical transmission of data and handles error
+notification, network topology, and flow control
+LLC dan MAC untuk identifikasi specific host
+
+As data is encoded with control information at each layer of the OSI model, the
+data is named with something called a protocol data unit (PDU). At the Transport layer, the
+PDU is called a segment, at the Network layer it’s a packet, at the Data Link a frame, and at
+the Physical layer it’s called bits. This method of naming the data at each layer is covered
+thoroughly in Chapter 2.
+
+layer 3 concern nya nyari network, kalo layer 2 concern nya nyari specific device
+Kalo di switch tuh tabelnya tabel mac address
+
+When a switch interface receives a frame with a destination hardware address that isn’t found in
+the device’s filter table, it will forward the frame to all connected segments. If the unknown
+device that was sent the “mystery frame” replies to this forwarding action, the switch updates its
+filter table regarding that device’s location. But in the event the destination address of the
+transmitting frame is a broadcast address, the switch will forward all broadcasts to every
+connected segment by default. (masih ada risiko broadcast yg tidak disangka)
+
+1.   Physical Layer
+
+The
+Physical layer communicates directly with the various types of actual communication media
+The Physical layer specifies the electrical, mechanical, procedural, and functional requirements
+for activating, maintaining, and deactivating a physical link between end systems
+
+A hub is really a multiple-port repeater.
+
+WLAN Controller: To automatically handle the configuration of wireless access points
+Firewall: To monitor and control the incoming and outgoing network traffic
+access point: To allow wireless devices to connect to a wired network
+
+The following network devices operate at all seven layers of the OSI model: network
+management stations (NMSs), gateways (not default gateways), servers, and network hosts.
 
 
 == Internetworking Models ===
