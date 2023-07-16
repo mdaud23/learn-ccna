@@ -1,2 +1,71 @@
 == Ethernet Networking and Data Encapsulation ==
 
+I really want you to grasp the big picture of LANs conceptually. The role Ethernet plays in today’s
+networks as well as what Media Access Control (MAC) addresses are and how they are used are
+two more critical networking basics you’ll want a solid understanding of as well.
+
+you’ll also learn about some very important Ethernet specifications.
+I’ll review the types of cabling
+used with Cisco devices in this chapter, demonstrate how to connect to a router or switch, plus
+show you how to connect a router or switch via a console connection.
+
+I’ll also introduce you to a vital process of encoding data as it makes its way down the OSI stack,
+known as encapsulation.
+
+Ethernet:
+- Ethernet is a contention-based media access method that allows all hosts on a network to share
+the same link’s bandwidth
+- Praktis
+
+Without employing VLANs in today’s switched environments, there
+wouldn’t be much bandwidth available to individual users. Switches break up collision domains
+with each port, which is awesome, but they’re still only one broadcast domain by default! It’s also
+one more reason why it’s extremely important to design our networks very carefully
+
+And key to carefully planning your network design is never to allow broadcast domains to grow
+too large and get out of control. Both collision and broadcast domains can easily be controlled
+with routers and VLANs, so there’s just no excuse to allow user bandwidth to slow to a painful
+crawl when there are plenty of tools in your arsenal to prevent the suffering.
+
+Ethernet networking uses a protocol called Carrier Sense Multiple Access with Collision
+Detection (CSMA/CD), which helps devices share the bandwidth evenly while preventing two
+devices from transmitting simultaneously on the same network medium
+
+CSMA/CD was actually
+created to overcome the problem of the collisions that occur when packets are transmitted from
+different nodes at the same time. And trust me—good collision management is crucial, because
+when a node transmits in a CSMA/CD network, all the other nodes on the network receive and
+examine that transmission
+
+You can use full-duplex Ethernet in at least the following six situations:
+- switch to host
+- switch to switch
+- host to host
+- switch to router
+- router to router
+- router to host
+
+Last, remember these important points:
+- There are no collisions in full-duplex mode.
+- A dedicated switch port is required for each full-duplex node.
+- The host network card and the switch port must be capable of operating in full-duplex mode.
+- The default behavior of 10Base-T and 100Base-T hosts is 10 Mbps half-duplex if the
+autodetect mechanism fails, so it is always good practice to set the speed and duplex of each
+port on a switch if you can.
+
+= Ethernet at the Data Link Layer =
+Ethernet at the Data Link layer is responsible for Ethernet addressing, commonly referred to as
+MAC or hardware addressing
+
+Ethernet is also responsible for framing packets received from the
+Network layer and preparing them for transmission on the local network through the Ethernet
+contention-based media access method.
+
+MAC Address terdiri dari 12 digit: 6 OUI dan 6 NIC
+
+1 byte is 8 bytes, bytes mean a slot for 0 and 1. So, if you have 4 bytes, u can represent a number from 0 to 15 
+0 = 0000
+15 = 1111
+
+
+
