@@ -62,10 +62,50 @@ Network layer and preparing them for transmission on the local network through t
 contention-based media access method.
 
 MAC Address terdiri dari 12 digit: 6 OUI dan 6 NIC
+atau terdiri dari 6 byte yang setara dengan 48 bit
 
-1 byte is 8 bytes, bytes mean a slot for 0 and 1. So, if you have 4 bytes, u can represent a number from 0 to 15 
+1 byte is 8 bits, bits mean a slot for 0 and 1. So, if you have 4 bits, u can represent a number from 0 to 15 
 0 = 0000
 15 = 1111
 
+= Binary Values, Nibble, Hex =
+10000000 = 128
+11000000 = 192
+11100000 = 224
+11110000 = 240
+11111000 = 248
+11111100 = 252
+11111110 = 254
+11111111 = 255
 
+Now suppose you have something like this: 0x6A. This is important because sometimes Cisco
+likes to put 0x in front of characters so you know that they are a hex value. It doesn’t have any
+other special meaning.
+
+1 hex is 1 nibble consisted of 4 bit
+
+ox6A: Six equals 0110, and A, which is 10 in hex, equals 1010, so the complete byte would
+be 01101010.
+
+To convert from binary to hex, just take the byte and break it into nibbles. Let me clarify this.
+Say you have the binary number 01010101. First, break it into nibbles—0101 and 0101—with the
+value of each nibble being 5 since the 1 and 4 bits are on. This makes the hex answer 0x55. And
+in decimal format, the binary number is 01010101, which converts to 64 + 16 + 4 + 1 = 85.
+
+= Ethernet Frames = 
+
+The Data Link layer is responsible for combining bits into bytes and bytes into frames. Frames
+are used at the Data Link layer to encapsulate packets handed down from the Network layer for
+transmission on a type of media access.
+
+Ethernet frame terdiri atas:
+- Preamble 7 bytes
+- SFD 1 byte
+- Destination 6 bytes
+- Source 6 bytes
+- Type 2 bytes
+- Data and Pad 46 - 1500 bytes
+- FCS 4 bytes
+
+note: Encapsulating a frame within a different type of frame is called tunneling.
 
