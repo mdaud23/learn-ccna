@@ -109,3 +109,36 @@ Ethernet frame terdiri atas:
 
 note: Encapsulating a frame within a different type of frame is called tunneling.
 
+note: jarak menjadi faktor penting ketika menentukan kabel network. diperlukan repeater untuk jarak yang jauh
+
+kabel:
+1. Category 5 Enhanced UTP cable
+The category 5 Enhanced UTP cable can handle speeds up to a gigabit with a distance of up to
+100 meters. Typically we’d use this cable for 100 Mbps and category 6 for a gigabit, but the
+category 5 Enhanced is rated for gigabit speeds and category 6 is rated for 10 Gbps!
+
+= Straight-Through Cable = 
+is used to connect
+- host to switch or hub
+- router to switch or hub
+4 wires are used in straight-through cable to connect ethernet devices
+
+= Crossover Cable = 
+is used to connect
+- switch to switch
+- hub to hub
+- host to host
+- hub to switch
+- router direct to host
+- router to router
+dinamakan crossover karena pemasangan kabel pada pinnya ga 1 to 1, tapi cross
+
+= UTP Gigabit Wiring (1000Base-T) =
+
+Butuh 4 pasang (total 8 kabel)
+
+= Rolled Cable =
+
+for console connection to router
+
+
