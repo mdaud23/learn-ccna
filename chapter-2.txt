@@ -167,3 +167,92 @@ technicians, we really don’t care who the data stream comes from because that�
 programmer’s problem. Our job is to rebuild the data stream reliably and hand it to the upper
 layers on the receiving device.
 
+port number tuh ada di transport layer
+ip address tuh ada di network layer
+mac address tuh ada di data link layer
+
+Hierarchy has many of the same benefits in network design that it does in other areas of life.
+When used properly, it makes networks more predictable and helps us define which areas should
+perform certain functions. Likewise, you can use tools such as access lists at certain levels in
+hierarchical networks and avoid them at others.
+
+Let’s face it: Large networks can be extremely complicated, with multiple protocols, detailed
+configurations, and diverse technologies. Hierarchy helps us summarize a complex collection of
+details into an understandable model, bringing order from the chaos. Then, as specific
+configurations are needed, the model dictates the appropriate manner in which to apply them.
+
+3 hierarchical layers:
+1. Core
+2. Distribution
+3. Access
+
+= The Core Layer = 
+The core layer is literally the core of the network. At the top of the hierarchy, the core layer is
+responsible for transporting large amounts of traffic both reliably and quickly. The only purpose
+of the network’s core layer is to switch traffic as fast as possible. The traffic transported across
+the core is common to a majority of users. But remember that user data is processed at the
+distribution layer, which forwards the requests to the core if needed.
+
+= The Distribution Layer =
+The distribution layer is sometimes referred to as the workgroup layer and is the
+communication point between the access layer and the core. The primary functions of the
+distribution layer are to provide routing, filtering, and WAN access and to determine how
+packets can access the core, if needed. The distribution layer must determine the fastest way that
+network service requests are handled—for example, how a file request is forwarded to a server.
+After the distribution layer determines the best path, it forwards the request to the core layer if
+necessary. The core layer then quickly transports the request to the correct service.
+
+= The Access Layer =
+The access layer controls user and workgroup access to internetwork resources. The access
+layer is sometimes referred to as the desktop layer. The network resources most users need will
+be available locally because the distribution layer handles any traffic for remote services.
+
+= Summary = 
+In this chapter, you learned the fundamentals of Ethernet networking, how hosts communicate
+on a network. You discovered how CSMA/CD works in an Ethernet half-duplex network.
+I also talked about the differences between half- and full-duplex modes, and we discussed the
+collision detection mechanism called CSMA/CD.
+I described the common Ethernet cable types used in today’s networks in this chapter as well,
+and by the way, you’d be wise to study that section really well!
+Important enough to not gloss over, this chapter provided an introduction to encapsulation.
+Encapsulation is the process of encoding data as it goes down the OSI stack.
+Last, I covered the Cisco three-layer hierarchical model. I described in detail the three layers and
+how each is used to help design and implement a Cisco internetwork.
+
+= Note =
+Backoff on an Ethernet network is the retransmission delay that’s enforced when a
+collision occurs. When that happens, a host will only resume transmission after the forced
+time delay has expired. Keep in mind that after the backoff has elapsed, all stations have equal
+priority to transmit data.
+
+Half-duplex Ethernet networking uses a protocol called Carrier Sense Multiple Access with
+Collision Detection (CSMA/CD), which helps devices share the bandwidth evenly while
+preventing two devices from transmitting simultaneously on the same network medium.
+
+Physical addresses or MAC addresses are used to identify devices at layer 2. MAC
+addresses are only used to communicate on the same network. To communicate on different
+network, we have to use layer 3 addresses (IP addresses).
+
+An Ethernet network is a shared environment, so all devices have the right to access the
+medium. If more than one device transmits simultaneously, the signals collide and cannot
+reach the destination. If a device detects another device is sending, it will wait for a specified
+amount of time before attempting to transmit.
+
+In creating the gigabit crossover cable, you’d still cross 1 to 3 and 2 to 6, but you would add
+4 to 7 and 5 to 8.
+
+When you set up the connection, use these settings:
+Bits per sec: 9600
+Data bits: 8
+Parity: None
+Stop bits: 1
+Flow control: None
+
+U/L:When set to 0, this bit represents a globally administered address, as specified by the IEEE,
+but when it’s a 1, it represents a locally governed and administered address.
+
+There are no collisions in full-duplex mode
+
+If you’re using TCP, the virtual circuit is defined by the source and destination port
+number plus the source and destination IP address and called a socket.
+
