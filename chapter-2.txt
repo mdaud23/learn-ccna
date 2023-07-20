@@ -1,4 +1,4 @@
-== Ethernet Networking and Data Encapsulation ==
+== Chapter 2: Ethernet Networking and Data Encapsulation ==
 
 I really want you to grasp the big picture of LANs conceptually. The role Ethernet plays in today’s
 networks as well as what Media Access Control (MAC) addresses are and how they are used are
