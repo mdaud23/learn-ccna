@@ -141,4 +141,29 @@ Butuh 4 pasang (total 8 kabel)
 
 for console connection to router
 
+= Data Encapsulation =
+When a host transmits data across a network to another device, the data goes through a process
+called encapsulation and is wrapped with protocol information at each layer of the OSI model.
+Each layer communicates only with its peer layer on the receiving device.
+
+To communicate and exchange information, each layer uses protocol data units (PDUs). These
+hold the control information attached to the data at each layer of the model. They are usually
+attached to the header in front of the data field but can also be at the trailer, or end, of it.
+
+Remember that the Transport and Network layers work together to rebuild a data stream on a
+receiving host, but it’s not part of their work to place their PDUs on a local network segment—
+which is the only way to get the information to a router or host.
+
+It’s the Data Link layer that’s responsible for taking packets from the Network layer and placing
+them on the network medium (cable or wireless).
+
+To put this frame on the network, it must first be put into a digital signal. Since a frame is really a
+logical group of 1s and 0s, the physical layer is responsible for encoding these digits into a digital
+signal, which is read by devices on the same local network. The receiving devices will
+synchronize on the digital signal and extract (decode) the 1s and 0s from the digital signal.
+
+Remember that a data stream is handed down from the upper layer to the Transport layer. As
+technicians, we really don’t care who the data stream comes from because that’s really a
+programmer’s problem. Our job is to rebuild the data stream reliably and hand it to the upper
+layers on the receiving device.
 
