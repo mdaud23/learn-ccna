@@ -1,2 +1,53 @@
 == Chapter 3: Introduction to TCP/IP ==
 
+It may be counterintuitive, but most of the development work on TCP/IP happened at UC
+Berkeley in Northern California, where a group of scientists were simultaneously working on the
+Berkeley version of UNIX, which soon became known as the Berkeley Software Distribution
+(BSD) series of UNIX versions.
+
+= TCP/IP and DoD Model =
+
+The DoD model is basically a condensed version of the OSI model that comprises four instead of
+seven layers:
+- Process / Application Layer
+- Host-to-Host layer or Transport Layer
+- Internet Layer
+- Network Access layer or Link layer
+
+the Process/Application
+layer defines protocols for node-to-node application communication and controls user-interface
+specifications.
+
+The Host-to-Host layer or Transport layer parallels the functions of the OSI’s Transport layer,
+defining protocols for setting up the level of transmission service for applications. It tackles
+issues like creating reliable end-to-end communication and ensuring the error-free delivery of
+data. It handles packet sequencing and maintains data integrity.
+
+The Internet layer corresponds to the OSI’s Network layer, designating the protocols relating to
+the logical transmission of packets over the entire network. It takes care of the addressing of
+hosts by giving them an IP (Internet Protocol) address and handles the routing of packets among
+multiple networks.
+
+At the bottom of the DoD model, the Network Access layer or Link layer implements the data
+exchange between the host and the network. The equivalent of the Data Link and Physical layers
+of the OSI model, the Network Access layer oversees hardware addressing and defines protocols
+for the physical transmission of data. The reason TCP/IP became so popular is because there
+were no set physical layer specifications, so it could run on any existing or future physical
+network!
+
+Kan ada DoD model ya... nah TCP/IP protocol suite tuh ada di setiap layer DoD
+
+telnet teh kayak windows viewer yak, tapi windows viewer pake UDP
+SSH tau lah ya buat apa
+FTP untuk transfer file, bisa kasih tau informasi directory juga. FTP dipake kalo mau transfer big size of file
+SNMP untuk collect network information dari Network Management Station (NMS)
+HTTP tau ya, tapi ini protokol lhoo
+HTTPS 
+Network Time Protocol synchronize the clocks on our computers to one standard time source (typically, an atomic clock)
+
+DNS resolve hostname to IP address
+An IP address identifies hosts on a network and the Internet as well, but DNS was designed to
+make our lives easier. Think about this: What would happen if you wanted to move your web
+page to a different service provider?
+
+DHCP (Dynamic Host Configuration Protocol)
