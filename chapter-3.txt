@@ -50,4 +50,72 @@ An IP address identifies hosts on a network and the Internet as well, but DNS wa
 make our lives easier. Think about this: What would happen if you wanted to move your web
 page to a different service provider?
 
-DHCP (Dynamic Host Configuration Protocol)
+= DHCP (Dynamic Host Configuration Protocol) =
+It assigns IP address to host
+It allows for easier
+administration and works well in small to very large network environments. Many types of
+hardware can be used as a DHCP server, including a Cisco router.
+
+A client that sends out a DHCP Discover message in order to receive an IP address sends out a
+broadcast at both layer 2 and layer 3.
+The layer 2 broadcast is all Fs in hex, which looks like this: ff:ff:ff:ff:ff:ff.
+The layer 3 broadcast is 255.255.255.255, which means all networks and all hosts.
+
+DHCP client four step process:
+1. The DHCP client broadcasts a DHCP Discover message looking for a DHCP server (Port 67).
+2. The DHCP server that received the DHCP Discover message sends a layer 2 unicast DHCP
+Offer message back to the host.
+3. The client then broadcasts to the server a DHCP Request message asking for the offered IP
+address and possibly other information.
+4. The server finalizes the exchange with a unicast DHCP Acknowledgment message.
+
+The main purpose of the Host-to-Host layer is to shield the upper-layer applications from the
+complexities of the network. This layer says to the upper layer, “Just give me your data stream,
+with any instructions, and I’ll begin the process of getting your information ready to send.”
+
+= Transmission Control Protocol =
+Transmission Control Protocol (TCP) takes large blocks of information from an application and
+breaks them into segments. It numbers and sequences each segment so that the destination’s TCP
+stack can put the segments back into the order the application intended
+
+TCP is a full-duplex, connection-oriented, reliable, and accurate protocol, but establishing all
+these terms and conditions, in addition to error checking, is no small task.
+
+Most programmers use TCP because it removes a lot of programming work, but for real-time
+video and VoIP, User Datagram Protocol (UDP) is often better because using it results in less
+overhead.
+
+= TCP Segment Format =
+Source port 16 digit - Destination port 16 digit
+masih banyak lagi dibawahnya
+
+= User Datagram Protocol =
+User Datagram Protocol (UDP) is basically the scaled-down economy model of TCP, which is
+why UDP is sometimes referred to as a thin protocol. Like a thin person on a park bench, a thin
+protocol doesn’t take up a lot of room—or in this case, require much bandwidth on a network.
+
+So clearly, there are times that it’s wise for developers to opt for UDP rather than TCP, one of
+them being when reliability is already taken care of at the Process/Application layer. Network
+File System (NFS) handles its own reliability issues, making the use of TCP both impractical and
+redundant. But ultimately, it’s up to the application developer to opt for using UDP or TCP, not
+the user who wants to transfer data faster!
+
+UDP does not sequence the segments and does not care about the order in which the segments
+arrive at the destination. UDP just sends the segments off and forgets about them. It doesn’t
+follow through, check up on them, or even allow for an acknowledgment of safe arrival—
+complete abandonment. Because of this, it’s referred to as an unreliable protocol. This does not
+mean that UDP is ineffective, only that it doesn’t deal with reliability issues at all.
+
+= UDP Segment Format =
+16 bit source port - 16 bit destination port
+16 bit length - 16 bit checksum
+data
+
+= Internet Layer Protocol =
+
+All network roads don’t lead to Rome—they lead to IP.
+ada internet protocol
+Remember, just as all
+roads lead to Rome, all segments or data must go through IP!
+
+
