@@ -119,3 +119,13 @@ Remember, just as all
 roads lead to Rome, all segments or data must go through IP!
 
 = ICMP =
+yah ping
+
+= Address Resolution Protocol =
+Address Resolution Protocol (ARP) finds the hardware address of a host from a known IP
+address.
+
+hardware address—the latter is hard-coded on a
+network interface card (NIC) and used for finding hosts on a local network
+
+= The Hierarchical IP Addressing Scheme
