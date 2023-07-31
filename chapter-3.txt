@@ -128,4 +128,27 @@ address.
 hardware address—the latter is hard-coded on a
 network interface card (NIC) and used for finding hosts on a local network
 
-= The Hierarchical IP Addressing Scheme
+= The Hierarchical IP Addressing Scheme =
+The 32-bit IP address is a structured or hierarchical address, as opposed to a flat or
+nonhierarchical address. Although either type of addressing scheme could have been used,
+hierarchical addressing was chosen for a good reason. The advantage of this scheme is that it can
+handle a large number of addresses, namely 4.3 billion (a 32-bit address space with two possible
+values for each position—either 0 or 1—gives you 23 2 , or 4,294,967,296). The disadvantage of
+the flat addressing scheme, and the reason it’s not used for IP addressing, relates to routing. If
+every address were unique, all routers on the Internet would need to store the address of each
+and every machine on the Internet. This would make efficient routing impossible, even if only a
+fraction of the possible addresses were used!
+The solution to this problem is to use a two- or three-level hierarchical addressing scheme that is
+structured by network and host or by network, subnet, and host.
+
+= Network Addressing =
+The network address (which can also be called the network number) uniquely identifies each
+network. Every machine on the same network shares that network address as part of its IP
+address. For example, in the IP address 172.16.30.56, 172.16 is the network address.
+
+Subdividing an IP address into a network and node address is determined by the class
+designation of one’s network
+
+Class A: network.node.node.node (bit pertama pada byte pertama harus 0)
+Class B: network.network.node.node (bit pertama harus nyala dan bit kedua harus 0 pada byte pertama)
+Class C: network.network.network.node (110, )
