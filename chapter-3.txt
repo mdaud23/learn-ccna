@@ -152,3 +152,103 @@ designation of one’s network
 Class A: network.node.node.node (bit pertama pada byte pertama harus 0)
 Class B: network.network.node.node (bit pertama harus nyala dan bit kedua harus 0 pada byte pertama)
 Class C: network.network.network.node (110, )
+
+If every host on every network was required to have real routable IP addresses, we would have
+run out of IP addresses to hand out years ago. But by using private IP addresses, ISPs,
+corporations, and home users only need a relatively tiny group of bona fide IP addresses to
+connect their networks to the Internet. This is economical because they can use private IP
+addresses on their inside networks and get along just fine.
+
+To accomplish this task, the ISP and the corporation—the end user, no matter who they are—
+need to use something called Network Address Translation (NAT), which basically takes a
+private IP address and converts it for use on the Internet. NAT is covered in Chapter 13,
+“Network Address Translation (NAT).” Many people can use the same real IP address to
+transmit out onto the Internet. Doing things this way saves megatons of address space—good for
+us all!
+
+So, What Private IP Address Should I Use?
+That’s a really great question: Should you use Class A, Class B, or even Class C private
+addressing when setting up your network? Let’s take Acme Corporation in SF as an example.
+This company is moving into a new building and needs a whole new network. It has 14
+departments, with about 70 users in each. You could probably squeeze one or two Class C
+addresses to use, or maybe you could use a Class B, or even a Class A just for fun.
+The rule of thumb in the consulting world is, when you’re setting up a corporate network—
+regardless of how small it is—you should use a Class A network address because it gives you
+the most flexibility and growth options. For example, if you used the 10.0.0.0 network
+address with a /24 mask, then you’d have 65,536 networks, each with 254 hosts. Lots of
+room for growth with that network!
+But if you’re setting up a home network, you’d opt for a Class C address because it is the
+easiest for people to understand and configure. Using the default Class C mask gives you one
+network with 254 hosts—plenty for a home network.
+With the Acme Corporation, a nice 10.1.×.0 with a /24 mask (the × is the subnet for each
+department) makes this easy to design, install, and troubleshoot.
+
+= IPv4 Addresses Types =
+Loopback (localhost) Used to test the IP stack on the local computer. Can be any address
+from 127.0.0.1 through 127.255.255.254.
+
+Layer 2 broadcasts These are sent to all nodes on a LAN.
+
+Broadcasts (layer 3) These are sent to all nodes on the network.
+
+Unicast This is an address for a single interface, and these are used to send packets to a single
+destination host.
+
+Multicast These are packets sent from a single source and transmitted to many devices on
+different networks. Referred to as “one-to-many.”
+
+= Layer 2 Broadcast =
+First, understand that layer 2 broadcasts are also known as hardware broadcasts—they only go
+out on a LAN, but they don’t go past the LAN boundary (router).
+
+The typical hardware address is 6 bytes (48 bits) and looks something like 45:AC:24:E3:60:A5.
+
+Every network interface card (NIC) will receive and read the frame, including the router, since
+this was a layer 2 broadcast, but the router would never, ever forward this!
+
+= Unicast =
+
+A unicast is defined as a single IP address that’s assigned to a network interface card and is the
+destination IP address in a packet—in other words, it’s used for directing packets to a specific
+host.
+
+= Multicast =
+
+Multicast is a different beast entirely. At first glance, it appears to be a hybrid of unicast and
+broadcast communication, but that isn’t quite the case. Multicast does allow point-to-multipoint
+communication, which is similar to broadcasts, but it happens in a different manner. The crux of
+multicast is that it enables multiple recipients to receive messages without flooding the messages
+to all hosts on a broadcast domain. However, this is not the default behavior—it’s what we can do
+with multicasting if it’s configured correctly!
+
+Multicast works by sending messages or data to IP multicast group addresses. Unlike with
+broadcasts, which aren’t forwarded, routers then forward copies of the packet out to every
+interface that has hosts subscribed to that group address. This is where multicast differs from
+broadcast messages—with multicast communication, copies of packets, in theory, are sent only
+to subscribed hosts. For example, when I say in theory, I mean that the hosts will receive a
+multicast packet destined for 224.0.0.10. This is an EIGRP packet, and only a router running the
+EIGRP protocol will read these. All hosts on the broadcast LAN, and Ethernet is a broadcast
+multi-access LAN technology, will pick up the frame, read the destination address, then
+immediately discard the frame unless they’re in the multicast group. This saves PC processing,
+not LAN bandwidth.
+
+Latihan Soal:
+
+Class A private IP address: 10.0.0.0 through 10.255.255.255
+Class B private IP address: 172.16.0.0 through 172.31.255.255
+Class C private IP address: 192.168.0.0 through 192.168.255.255
+
+If a DHCP conflict is detected, either by the server sending a ping and getting a response or
+by a host using a gratuitous ARP (arp’ing for its own IP address and seeing if a host responds),
+then the server will hold that address and not use it again until it is fixed by an administrator.
+
+Secure Shell (SSH) protocol sets up a secure session that’s similar to Telnet over a standard
+TCP/IP connection and is employed for doing things like logging into systems, running
+programs on remote systems, and moving files from one system to another.
+
+A host uses something called a gratuitous ARP to help avoid a possible duplicate address.
+The DHCP client sends an ARP broadcast out on the local LAN or VLAN using its newly
+assigned address to help solve conflicts before they occur
+
+Both FTP and Telnet use TCP at the Transport layer; however, they both are Application
+layer protocols, so the Application layer is the best answer for this question.
