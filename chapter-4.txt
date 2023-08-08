@@ -1,1 +1,10 @@
 == Chapter 4: Easy Subnetting ==
+
+Creating subnetworks is essentially the act of taking bits from the host portion of the address and
+reserving them to define the subnet address instead. Clearly this will result in fewer bits being
+available for defining your hosts, which is something you’ll always want to keep in mind.
+
+class - default subnet
+Class A: 255.0.0.0
+Class B: 255.255.0.0
+Class C: 255.255.255.0
