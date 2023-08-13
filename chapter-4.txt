@@ -46,3 +46,20 @@ pake first and last subnet. dia kayak nyediain 2 ekstra subnet
 There are many different ways to subnet a network. The right way is the way that works best for
 you. In a Class C address, only 8 bits are available for defining the hosts.
 
+==================================================================
+Subnetting adalah proses pemecahan jaringan besar menjadi sub-jaringan yang lebih kecil
+untuk mengefisienkan traffic dan akan ada network tambahan, sayangnya mengurangi slot untuk host
+
+pada setiap rentang IP pasti ada: IP Host, IP Network, dan IP Broadcast
+IP network berada di awal, IP broadcast berada di akhir, sedangkan IP host in between
+misal prefix /24
+maka jumlah IP ada 256. 0 - 255
+
+biasanya yg diitung ketika disodorkan ip address dengan prefixnya:
+1. rentan IP
+2. IP Host
+3. IP Network
+4. IP Broadcast
+5. Subnet mask
+
+ada cara mudah di buku halaman akhirna
