@@ -8,3 +8,41 @@ class - default subnet
 Class A: 255.0.0.0
 Class B: 255.255.0.0
 Class C: 255.255.255.0
+
+= Classless Inter-Domain Routing (CIDR) =
+It’s basically the method that Internet service providers (ISPs) use to allocate a number of
+addresses to a company, a home—their customers.
+
+When you receive a block of addresses from an ISP, what you get will look something like this:
+192.168.10.32/28. This is telling you what your subnet mask is. The slash notation (/) means
+how many bits are turned on (1s). Obviously, the maximum could only be /32 because a byte is 8
+bits and there are 4 bytes in an IP address: (4 × 8 = 32)
+
+Take, for example, a Class A default subnet mask, which is 255.0.0.0. This tells us that the first
+byte of the subnet mask is all ones (1s), or 11111111. When referring to a slash notation, you need
+to count all the 1 bits to figure out your mask. The 255.0.0.0 is considered a /8 because it has 8
+bits that are 1s—that is, 8 bits that are turned on.
+
+pendefinisian subnet mask x cidr value dimulai dari pangkat 2 terbesar dlu
+255.0.0.0 -> /8
+255.128.0.0 -> /9
+255.192.0.0 -> /10
+255.224.0.0 -> /11
+255.240.0.0 -> /12
+255.248.0.0 -> /13
+255.252.0.0 -> /14
+255.254.0.0 -> /15
+255.255.0.0 -> /16
+etc.
+
+cuma bisa sampe slash /30 karena perlu ada host euy
+
+/8 through /15 can only be used with class A; /16 through /23 class A&B; /24 through /30 class A,B,&C
+
+= IP Subnet-Zero =
+pake first and last subnet. dia kayak nyediain 2 ekstra subnet
+
+= Subnetting Class C address =
+There are many different ways to subnet a network. The right way is the way that works best for
+you. In a Class C address, only 8 bits are available for defining the hosts.
+
