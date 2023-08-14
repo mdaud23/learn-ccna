@@ -63,3 +63,5 @@ biasanya yg diitung ketika disodorkan ip address dengan prefixnya:
 5. Subnet mask
 
 ada cara mudah di buku halaman akhirna
+kalo nge subnet IP network class C tuh yg awalnya 0 jadi banyak gitu subnetnya, possible 1 and 0
+tapi kalo ga 0 diitung 1 subnetnya aj (based on youtube)
